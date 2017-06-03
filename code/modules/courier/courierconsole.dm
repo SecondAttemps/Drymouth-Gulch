@@ -16,7 +16,9 @@
 	name = "Courier Depo"
 	desc = "A machine which exchanges packages for caps, and vise-versa."
 	icon = 'icons/obj/machines/courier_machines.dmi'
-	icon_state = "courierDepo"
+	icon_state = "courierVend"
+	density = 1
+	anchored = 1
 	var/capBank = 0
 
 /obj/machinery/courierconsole/New()
@@ -40,4 +42,7 @@
 			tempamount = I.amount
 			capBank += tempamount
 			I.amount -= tempamount
+			user.unEquip(W)
+			if (I.amount <= 0)
+				del(I)
 			user << "<span class='notice'>You add [tempamount] caps to the [src.name].</span>"
