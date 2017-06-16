@@ -50,7 +50,7 @@
 /obj/item/weapon/kitchen/knife
 	name = "kitchen knife"
 	icon_state = "knife"
-	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
+	desc = "A general purpose Chef's Knife made by SharpWit Inc. Guaranteed to stay sharp for years to come."
 	flags = CONDUCT
 	force = 10
 	w_class = 2
